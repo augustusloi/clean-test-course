@@ -1,7 +1,8 @@
 describe('Hits Home Page', () => {
-  it('passes', () => {
+  beforeEach(() => {
     cy.visit('http://hangryweb-env.eba-vdyerazm.us-east-1.elasticbeanstalk.com/');
   });
+
   it('displays the Welcome message', () => {
     // We use the `cy.get()` command to get all elements that match the selector.
     // Then, we use `should` to assert that there are is a Welcome message.
@@ -24,9 +25,10 @@ describe('Hits Home Page', () => {
 });
 
 describe('Hits Order Page', () => {
-  it('passes', () => {
+  beforeEach(() => {
     cy.visit('http://hangryweb-env.eba-vdyerazm.us-east-1.elasticbeanstalk.com/order');
   });
+  
   it('shows Your Order title', () => {
     // We use the `cy.get()` command to get all elements that match the selector.
     //Check to see if 'Your Order' exists
